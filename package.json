@@ -1,0 +1,30 @@
+{
+  "name": "empyr-react-native-bridge",
+  "title": "Empyr React Native Bridge" ,
+  "version": "1.0.0",
+  "description": "This library is intended to help ease the integration effort for partners that participate in the Empyr Offer Platform.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmpyrNetwork/empyr-react-native-bridge.git",
+    "baseUrl": "https://github.com/EmpyrNetwork/empyr-react-native-bridge"
+  },
+  "keywords": [
+    "empyr-react-native-bridge"
+  ],
+  "author": {
+    "name": "Jason Bausewein",
+    "email": "jbausewein@empyr.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": "^16.8.1",
+    "react-native": ">=0.59.0 <1.0.x"
+  },
+  "devDependencies": {
+    "react": "^16.8.3",
+    "react-native": "^0.59.10"
+  }
+}

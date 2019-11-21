@@ -18,7 +18,7 @@ Add the empyr-react-native-bridge from the npm registry.
 yarn add empyr-react-native-bridge
 ```
 
-Next link dependencies (not required if using react native >= 0.60)
+If using react native < 0.60, you will have to link dependencies.
 
 ```
 react-native link
@@ -59,13 +59,6 @@ Type of impression can be of two choices: "PROFILE_VIEW" or "SEARCH_VIEW"
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Button, NativeModules} from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
 type Props = {};
 export default class App extends Component<Props> {
   state = {
@@ -87,8 +80,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <Text style={styles.welcome}>Sample App for Empyr Bridge</Text>
         <Button
           onPress={this.trackProfileView}
           title="Track - profile view"

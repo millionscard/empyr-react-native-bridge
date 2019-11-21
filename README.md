@@ -1,4 +1,5 @@
 ## Instructions how to add the empyr to your react native application
+[![npm version](https://badge.fury.io/js/empyr-react-native-bridge.svg)](https://badge.fury.io/js/empyr-react-native-bridge)
 
 Install react native command line tools.
 
@@ -126,7 +127,7 @@ The sample app has two buttons to test the tracking functionality.
 
 ![ios-screenshot](docs/ios-screenshot.png?raw=true "ios screenshot")
 
-### Instructions to run Android
+#### Instructions to run Android
 
 Before you can build android, you will need to specify the location of the android sdk.
 

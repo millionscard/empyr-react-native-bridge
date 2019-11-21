@@ -1,4 +1,4 @@
-## Instructions how to add the empyr to your react native application
+## Install
 [![npm version](https://badge.fury.io/js/empyr-react-native-bridge.svg)](https://badge.fury.io/js/empyr-react-native-bridge)
 
 Install react native command line tools.
@@ -42,11 +42,30 @@ https://facebook.github.io/react-native/docs/native-modules-ios
 4. Name it however you want and create it.
 5. Click accept to create Objective-C bridging header.
 
+## Integrate
+
+First the EmpyrBridge should be initialized in your componentDidMount method.
+
+```js
+  componentDidMount(){
+    NativeModules.EmpyrBridge.initialize("23d5f04e-424b-4751-b862-94cae1787c74")
+  }
+```
+
 Next update your javascript code to call the EmpyrBridge track method with the offerId and type of impression.  The offerId would be the offer that is being viewed by the user and IS NOT the business id but the actual offer id.  For any given business if there is more than one offer then this would result in more than one call to the callEmpyrTracker method
 
 Note that the tracker does not make a call over network for each time it is called, but rather collects, coalates and makes network calls only periodically to reduce the load on your network.
 
 Type of impression can be of two choices: "PROFILE_VIEW" or "SEARCH_VIEW"
+```js
+  trackProfileView = () => {
+    NativeModules.EmpyrBridge.track(1111,"PROFILE_VIEW")
+  }
+```
+
+## Example
+
+A very simple example can be found in the sample directory.
 
 [App.js](sample/App.js)
 ```js
@@ -116,7 +135,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-#### Instructions to run IOS
+### Running on IOS
 
 You can now run the application in the ios simulator.
 
@@ -128,7 +147,7 @@ The sample app has two buttons to test the tracking functionality.
 
 ![ios-screenshot](docs/ios-screenshot.png?raw=true "ios screenshot")
 
-#### Instructions to run Android
+## Running on Android
 
 Before you can build android, you will need to specify the location of the android sdk.
 

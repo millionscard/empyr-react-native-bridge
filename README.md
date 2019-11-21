@@ -48,6 +48,7 @@ Note that the tracker does not make a call over network for each time it is call
 
 Type of impression can be of two choices: "PROFILE_VIEW" or "SEARCH_VIEW"
 
+[App.js](sample/App.js)
 ```js
 /**
  * Sample React Native App

@@ -1,7 +1,7 @@
 {
   "name": "empyr-react-native-bridge",
   "title": "Empyr React Native Bridge",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This library is intended to help ease the integration effort for partners that participate in the Empyr Offer Platform.",
   "main": "index.js",
   "repository": {

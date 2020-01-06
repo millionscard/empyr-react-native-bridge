@@ -32,15 +32,13 @@ cd SampleApp/ios
 pod install
 ```
 
-The empyr module uses swift, so you must have at least one swift file in your main application as specified in the react native documentation (you may skip this step if you already have one)
+Since our module uses swift you need to have at least one swift file and bridging header in your main xcode project.  This answer on stack overflow has some screenshots how to do it.
+
+https://stackoverflow.com/a/56187043
+
+This is also vaguely documented at the bottom of the react native docs, so facebook is aware of the issue but hasn't got around to fixing it yet.
 
 https://facebook.github.io/react-native/docs/native-modules-ios
-
-1. Open the Xcode project for your application.
-2. Select File/New/File...
-3. Choose Swift file and click Next.
-4. Name it however you want and create it.
-5. Click accept to create Objective-C bridging header.
 
 ## Integrate
 

@@ -1,7 +1,5 @@
 package com.empyr.react;
 
-import android.support.annotation.Nullable;
-
 import com.empyr.api.EmpyrClient;
 import com.empyr.tracker.EmpyrTracker;
 import com.facebook.react.bridge.Callback;
@@ -44,7 +42,7 @@ public class EmpyrBridgeModule extends ReactContextBaseJavaModule
             tracker = EmpyrTracker.getInstance( client, getCurrentActivity().getApplicationContext() );
             tracker.track( offerId, trackerString.equalsIgnoreCase ( "PROFILE_VIEW" ) ? EmpyrTracker.Tracker.PROFILE_VIEW : EmpyrTracker.Tracker.SEARCH_VIEW );
         }
-		catch ( IllegalViewOperationException e )
+	catch ( IllegalViewOperationException e )
         {
 
         }
